@@ -1,0 +1,1 @@
+It demonstrates a simple way to call android sdk hidden apis directly.
