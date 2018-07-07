@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    /*
+      Android Jar
+     */
+    final String targetSdkVersion = '26'
+    final Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    final String sdkDir = properties.getProperty('sdk.dir')
+
+    compileOnly files("${sdkDir}/platforms/android-${targetSdkVersion}/android.jar")
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
